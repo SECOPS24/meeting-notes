@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Meeting Notes</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <h1>Meeting Notes</h1>
+    <nav class="tabs" aria-label="Views">
+      <button type="button" id="tab-meetings" class="tab active">Meetings</button>
+      <button type="button" id="tab-actions" class="tab">Action items <span id="open-count" class="badge" hidden></span></button>
+    </nav>
+  </header>
+
+  <div id="view-meetings" class="layout">
+    <aside class="sidebar">
+      <button type="button" id="new-meeting" class="btn primary block">+ New meeting</button>
+      <input type="search" id="search" placeholder="Search title, attendee, notes" aria-label="Search meetings">
+      <ul id="meeting-list" class="meeting-list"></ul>
+    </aside>
+    <main id="editor" class="panel"></main>
+  </div>
+
+  <main id="view-actions" class="panel wide" hidden></main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
